@@ -1,0 +1,12 @@
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>Need Title</title>
+        {% endif %}
+    </head>
+    <body bgcolor=#EDE4CF style="font-family: Arial">
+        {% block content %}{% endblock %}
+    </body>
+</html>

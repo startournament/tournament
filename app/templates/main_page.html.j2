@@ -1,0 +1,9 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    {% for msg in messages %}
+        <span>{{ msg }}</span>
+        <br>
+    {% endfor %}
+    <img src= "{{ url_for('static', filename=('pictures/' + image_name ) ) }}">
+{% endblock %}

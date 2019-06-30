@@ -5,7 +5,7 @@ import rulse
 import subprocess
 separate = "_______________________________"
 const = random.choice(list_constell)
-rulse.text()
+print(*rulse.text())
 print(separate)
 print(const)
 q = 'closed'
