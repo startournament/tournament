@@ -1,1 +1,1 @@
-worker: python constellation.py
+web: python constellation.py
