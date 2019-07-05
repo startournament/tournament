@@ -1,0 +1,7 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <div class="picture">
+        <img src= "{{ url_for('static', filename=('pictures/' + obj_name ) ) }}">
+    </div>
+{% endblock %}

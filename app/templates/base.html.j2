@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/main_page.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/styles.css')}}">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         {% if title %}
             <title>{{ title }}</title>
@@ -10,6 +10,12 @@
     </head>
     <body bgcolor=#00000 class="main">
     <div class="container">
+        {% if messages %}
+            {% for msg in messages %}
+                <span>{{ msg }}</span>
+                <br>
+            {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
     </div>
     </body>

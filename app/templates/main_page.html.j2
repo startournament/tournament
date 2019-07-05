@@ -5,10 +5,6 @@
         <img src= "{{ url_for('static', filename=('pictures/' + image_name ) ) }}">
     </div>
     <form action="" method="post">
-    {% for msg in messages %}
-        <span>{{ msg }}</span>
-        <br>
-    {% endfor %}
     {{ form.hidden_tag() }}
     <p>
         {{ form.text(size=32) }}
