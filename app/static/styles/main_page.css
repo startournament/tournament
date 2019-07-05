@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    background-color: #00070F; 
+    padding: 20px; 
+    text-align: left; 
+    width: 1000px; 
+    border: 1px solid grey; 
+    margin:auto;
+    height: 500px;
+}
+
+.table_main{
+    width: 100%; 
+    border-color: white;
+}
+
+.picture{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: none;
+    padding: 5px;
+    max-width: 700px;
+    max-height: 500px; 
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+background: #000F19;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #02232C;  
+}

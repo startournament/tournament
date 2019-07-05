@@ -1,11 +1,14 @@
 {% extends "base.html.j2" %}
 
 {% block content %}
+    <div class="picture">
+        <img src= "{{ url_for('static', filename=('pictures/' + image_name ) ) }}">
+    </div>
+    <form action="" method="post">
     {% for msg in messages %}
         <span>{{ msg }}</span>
         <br>
     {% endfor %}
-    <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
         {{ form.text(size=32) }}
@@ -13,5 +16,4 @@
     <p>
         {{ form.submit(size=32) }}
     </p>
-    <img src= "{{ url_for('static', filename=('pictures/' + image_name ) ) }}">
 {% endblock %}
