@@ -1,12 +1,19 @@
+.main {
+    font-family: Cochin, Charter, Arial; 
+    color: white; 
+    font-size: 28;
+}
+
 .container {
+    top: 10px;
     position: relative;
     background-color: #00070F; 
     padding: 20px; 
     text-align: left; 
-    width: 1000px; 
+    width: 70%; 
     border: 1px solid grey; 
     margin:auto;
-    height: 500px;
+    height: 560px;
 }
 
 .table_main{
@@ -16,26 +23,27 @@
 
 .picture{
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 20px;
+    top: 20px;
     border: none;
     padding: 5px;
-    max-width: 700px;
+    max-width: 70%;
     max-height: 500px; 
     overflow: auto;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 }
 
 
 ::-webkit-scrollbar-track {
-background: #000F19;
-border-radius: 5px;
+    background: #000F19;
 }
 
-::-webkit-scrollbar-thumb {
-background: #02232C;  
+::-webkit-scrollbar-thumb { 
+    background: #02232C;
+    border-radius: 10px; 
 }
+
