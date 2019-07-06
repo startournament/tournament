@@ -29,7 +29,7 @@ a:hover {
     min-width: 850px;
     border: 1px solid grey; 
     margin:auto;
-    height: 560px;
+    min-height: 600px;
 }
 
 .table_main{
@@ -54,7 +54,7 @@ a:hover {
 
 .box {
     position: absolute;
-    top: 520px;
+    bottom: 30px;
     right: 20px;
     background-color: #00070F; 
     padding: 20px;
