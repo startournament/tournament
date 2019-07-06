@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from dictC import *
+from dictionary import *
 import random
 import rulse
 import subprocess

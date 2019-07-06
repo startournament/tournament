@@ -1,19 +1,22 @@
-a 
-{
+p {
+    font-size: 24;
+}
+
+a  {
     text-decoration: none;
     color: #8FAED6 !important;
     font-size: 24;
 }
 
-a:hover
-{
+a:hover {
     color: #4E6E97 !important;
 }
 
 .main {
-    font-family: Cochin, Charter, Arial; 
+    font-family: Cochin, Charter, 'Times New Roman', Courier, Didot, Arial; 
     color: white; 
     font-size: 28;
+    min-width: 800px;
 }
 
 .container {
@@ -22,7 +25,7 @@ a:hover
     background-color: #00070F; 
     padding: 20px; 
     text-align: left; 
-    width: 70%; 
+    width: 75%; 
     min-width: 850px;
     border: 1px solid grey; 
     margin:auto;
@@ -34,6 +37,9 @@ a:hover
     border-color: white;
 }
 
+.rulse{
+    color: #8AA8CC;
+}
 
 .picture{
     position: absolute;
@@ -44,6 +50,17 @@ a:hover
     max-width: 70%; min-width: 300px;
     max-height: 500px; 
     overflow: auto;
+}
+
+.box {
+    position: absolute;
+    top: 520px;
+    right: 20px;
+    background-color: #00070F; 
+    padding: 20px;
+    width: 70px;
+    height: 60px;
+    border: 1px solid grey; 
 }
 
 ::-webkit-scrollbar {
