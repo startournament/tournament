@@ -69,7 +69,6 @@ def second_game(lst, const):
                 print_list.append(lst[i][0] + ' &#10008')
         else:
             print_list.append(lst[i])
-    print([const])
     return render_template('second_game.html.j2', title = "Second game", 
         text = print_list, image_name = image_name, next_const = new_const, 
         messages = [const])
