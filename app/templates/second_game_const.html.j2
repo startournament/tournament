@@ -2,11 +2,10 @@
 
 {% block content %}
     <form action="" method="post">
-    {{ form.hidden_tag() }}
-    <p>
+        {{ form.hidden_tag() }}
+        <p>
         {{ form.text(size=32) }}
-    </p>
-    <p>
-        {{ form.submit(size=32) }}
-    </p>
+        </p>
+    <input id="submit" name="submit" size="32" type="submit" value="Проверить"
+    class="button_submit">
 {% endblock %}

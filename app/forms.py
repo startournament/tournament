@@ -5,4 +5,3 @@ from wtforms.validators import DataRequired
 
 class second_game_const_form(FlaskForm):
     text = StringField(validators = [DataRequired()])
-    submit = SubmitField('Проверить')

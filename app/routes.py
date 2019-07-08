@@ -27,22 +27,6 @@ def second_game_const(const):
     return render_template('second_game_const.html.j2', title = "Second game", 
         messages = messages, form = form)
 
-@app.route('/second_game/<ans>/ans/', methods = ["GET", "POST"])
-def second_game(lst, const):
-    print_list = []
-    image_name = const + '.png'
-    new_const = new_constellation.one_step()
-    for i in range(len(lst)):
-        if type(lst[i]) == tuple:
-            if lst[i][1] == 1:
-                print_list.append(lst[i][0] + ' &#10004')
-            elif lst[i][0] != '':
-                print_list.append(lst[i][0] + ' &#10008')
-        else:
-            print_list.append(lst[i])
-    return render_template('second_game.html.j2', title = "Second game", 
-        text = print_list, image_name = image_name, next_const = new_const)
-
 @app.route('/image/<obj>/')
 def image_obj(obj):
     if obj in dictionary:
@@ -72,3 +56,20 @@ def rulse(game):
     text = Text(game)
     return render_template('rulse.html.j2', title = 'Rulse', 
         messages = ['Правила игры'], text = text)
+
+def second_game(lst, const):
+    print_list = []
+    image_name = const + '.png'
+    new_const = new_constellation.one_step()
+    for i in range(len(lst)):
+        if type(lst[i]) == tuple:
+            if lst[i][1] == 1:
+                print_list.append(lst[i][0] + ' &#10004')
+            elif lst[i][0] != '':
+                print_list.append(lst[i][0] + ' &#10008')
+        else:
+            print_list.append(lst[i])
+    print([const])
+    return render_template('second_game.html.j2', title = "Second game", 
+        text = print_list, image_name = image_name, next_const = new_const, 
+        messages = [const])
