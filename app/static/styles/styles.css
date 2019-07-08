@@ -63,6 +63,18 @@ a:hover {
     border: 1px solid grey; 
 }
 
+.button_submit
+{
+    border: 1px;   
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 6px;
+    background-color: #123E54;
+    color: white;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;

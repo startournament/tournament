@@ -1,0 +1,12 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.text(size=32) }}
+    </p>
+    <p>
+        {{ form.submit(size=32) }}
+    </p>
+{% endblock %}

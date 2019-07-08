@@ -4,12 +4,11 @@
     <div class="picture">
         <img src= "{{ url_for('static', filename=('pictures/' + image_name ) ) }}">
     </div>
-    <form action="" method="post">
-    {{ form.hidden_tag() }}
     <p>
-        {{ form.text(size=32) }}
+    {% for line in text %}
+        {{ line }}<br>
+    {% endfor %}
     </p>
-    <p>
-        {{ form.submit(size=32) }}
-    </p>
+    <a href={{ '/second_game/' + next_const }} class="button_submit">Дальше</a>
+    <a href='/mainpage' class="button_submit">Закончить</a>
 {% endblock %}
