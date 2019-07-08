@@ -7,6 +7,7 @@ from app.forRoutes.image_obj import Image_obj
 from app.forRoutes.mainpage import MainPage
 from app.forRoutes.text import Text
 from app.forRoutes.second_game import SecondGameConst
+from app.forRoutes.parser import parser
 
 @app.route('/')
 @app.route('/mainpage/')
@@ -69,6 +70,7 @@ def second_game(lst, const):
                 print_list.append(lst[i][0] + ' &#10008')
         else:
             print_list.append(lst[i])
+    print_list = parser(print_list)
     return render_template('second_game.html.j2', title = "Second game", 
         text = print_list, image_name = image_name, next_const = new_const, 
         messages = [const])
