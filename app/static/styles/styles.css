@@ -1,11 +1,11 @@
 p {
-    font-size: 20;
+    font-size: 22;
 }
 
 a {
     text-decoration: none;
     color: #8FAED6 !important;
-    font-size: 20;
+    font-size: 22;
 }
 
 a:hover {
@@ -14,8 +14,8 @@ a:hover {
 
 .main {
     font-family: 'Times New Roman'; 
-    color: white; 
-    font-size: 28;
+    color: #C8D6DF; 
+    font-size: 32px;
     min-width: 800px;
 }
 
@@ -34,7 +34,7 @@ a:hover {
 
 .table_main{
     width: 100%; 
-    border-color: white;
+    border-color: #C8D6DF;
 }
 
 .rulse{
@@ -63,18 +63,45 @@ a:hover {
     border: 1px solid grey; 
 }
 
+.text_field
+{
+    border: 1px;   
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 6px;
+    background-color: #066084;
+    color: #C8D6DF;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    border-collapse: collapse;
+    text-decoration: none;
+    max-width: 600px;
+    min-width: 50px;
+    min-height: 40px;
+    max-height: 400px;
+    width: 400px;
+    height: 80px;
+}
+
 .button_submit
 {
     border: 1px;   
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 24px;
     padding: 6px;
     background-color: #123E54;
     color: #8FAED6;
     font-family: 'Times New Roman';
-    font-size: 18px;
+    font-size: 22px;
     border-collapse: collapse;
     text-decoration: none;
+}
+
+.button_submit:hover
+{
+    background-color: #031921;
+    color: #123E54;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
