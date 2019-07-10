@@ -50,7 +50,9 @@ def image_obj(obj):
         if obj == 'constellation':
             links = ['<a href=/image/' + el + '/>' + lat_rus_dict[el] + '</a>' 
             for el in dictionary[obj]]
-        else:
+        elif obj == 'messier':
+            return render_template('messier.html.j2', title = 'List of ' + obj, 
+                lst = dictionary['messier'], messages = ['Выберите объект:'])
             links = ['<a href=/image/' + el + '/>' + el + '</a>' 
             for el in dictionary[obj]]
         return render_template('image.html.j2', title = 'List of ' + obj, 

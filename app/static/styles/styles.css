@@ -109,6 +109,20 @@ a:hover {
     height: 10px;
 }
 
+.grid_boxes
+{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(101, 100px); 
+}
+
+.grid_boxes > div > a > img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 ::-webkit-scrollbar-track {
     background: #000F19;
