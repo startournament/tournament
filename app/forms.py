@@ -4,4 +4,7 @@ from wtforms import TextAreaField
 from wtforms.validators import DataRequired
 
 class second_game_const_form(FlaskForm):
-    text = TextAreaField(validators = [DataRequired()])
+    text = TextAreaField()
+
+class first_game_const_form(FlaskForm):
+    text = TextAreaField()
