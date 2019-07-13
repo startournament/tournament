@@ -4,7 +4,7 @@
     <br>
     <div class="grid_boxes">
         {% for obj in lst %}
-            <div><a href="{{ '/image/' + obj }}"><img src= "{{ url_for('static', filename=('pictures/' + obj + '.png' ) ) }}"></a></div>
+            <div><img src= "{{ url_for('static', filename=('pictures/' + obj + '.png' ) ) }}"><a href="{{ '/image/' + obj }}">{{ obj }}</a></div>
         {% endfor %}
     </div>
 {% endblock %}

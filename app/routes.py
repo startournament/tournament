@@ -32,7 +32,7 @@ def first_game_const(const):
             messages = messages, form = form, text = text, image_name = const + '.png', 
             game = 'first_game', next_const = new_const)
     return render_template('const_game_ans.html.j2', title = "First game", 
-        messages = messages, form = form, image_name = const + '.png')
+        messages = messages, form = form, image_name = const + '.png', game = 'first_game')
 
 @app.route('/second_game/<const>/', methods = ["GET", "POST"])
 def second_game_const(const):
@@ -42,7 +42,7 @@ def second_game_const(const):
     if list_mark:
         return second_game(list_mark, const)
     return render_template('const_game_ans.html.j2', title = "Second game", 
-        messages = messages, form = form)
+        messages = messages, form = form, game = 'second_game')
 
 @app.route('/image/<obj>/')
 def image_obj(obj):
@@ -74,7 +74,7 @@ def image():
 def rulse(game):
     text = Text(game)
     return render_template('rulse.html.j2', title = 'Rulse', 
-        messages = ['Правила игры'], text = text)
+        messages = ['Правила'], text = text)
 
 @app.route('/messier/<obj>')
 def messier(obj):

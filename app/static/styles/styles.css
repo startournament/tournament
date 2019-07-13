@@ -4,19 +4,18 @@ p {
 
 a {
     text-decoration: none;
-    color: #8FAED6 !important;
+    color: #8FAED6;
     font-size: 22;
 }
 
 a:hover {
-    color: #4E6E97 !important;
+    color: #4E6E97;
 }
 
 .main {
     font-family: 'Times New Roman'; 
     color: #C8D6DF; 
     font-size: 32px;
-    min-width: 800px;
 }
 
 .container {
@@ -26,7 +25,6 @@ a:hover {
     padding: 20px; 
     text-align: left; 
     width: 75%; 
-    min-width: 850px;
     border: 1px solid grey; 
     margin:auto;
     min-height: 600px;
@@ -53,14 +51,9 @@ a:hover {
 }
 
 .box {
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
-    background-color: #00070F; 
-    padding: 20px;
-    width: 70px;
-    height: 60px;
-    border: 1px solid grey; 
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 
 .text_field
@@ -109,20 +102,27 @@ a:hover {
     height: 10px;
 }
 
-.grid_boxes
-{
+.grid_boxes {
     display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-auto-rows: 120px;
-}
-
-.grid_boxes > div > a > img
-{
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-auto-rows: 130px;}
+.grid_boxes > div > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
+    object-fit: cover; }
+.grid_boxes > div > a {
+    display: block;
+    position: relative;
+    bottom: 130px;
+    color: rgb(0, 0, 0, 0);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px; padding-top: 94px; }
+.grid_boxes > div > a:hover {
+    position: relative;
+    color: #8FAED6;
+    background-color: rgb(0, 0, 0, 0.6); border: 1px solid rgb(32, 37, 44)}
 
 ::-webkit-scrollbar-track {
     background: #000F19;
