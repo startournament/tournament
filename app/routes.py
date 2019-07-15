@@ -23,11 +23,11 @@ def first_game_const(const):
     messages = [const]
     new_const = new_constellation.one_step()
     if form.validate_on_submit():
-        text = form.text.data
+        text = parser([form.text.data])[0]
         if text == lat_rus_dict[const]:
-            text = parser([text + ' &#10004'])
+            text = [text + ' &#10004']
         else:
-            text = parser([text + ' &#10008', lat_rus_dict[const]])
+            text = [text + ' &#10008', lat_rus_dict[const]]
         return render_template('const_game.html.j2', title = "First game", 
             messages = messages, form = form, text = text, image_name = const + '.png', 
             game = 'first_game', next_const = new_const)
@@ -82,6 +82,7 @@ def messier(obj):
     return render_template()
 
 def second_game(lst, const):
+    print(lst)
     print_list = []
     image_name = const + '.png'
     new_const = new_constellation.one_step()
@@ -93,7 +94,15 @@ def second_game(lst, const):
                 print_list.append(lst[i][0] + ' &#10008')
         else:
             print_list.append(lst[i])
-    print_list = parser(print_list)
     return render_template('const_game.html.j2', title = "Second game", 
         text = print_list, image_name = image_name, next_const = new_const, 
         messages = [const], game = 'second_game')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('error404.html.j2', title = 500), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('error500.html.j2', title = 500), 500
+

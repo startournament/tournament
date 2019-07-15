@@ -45,7 +45,7 @@ a:hover {
     top: 60px;
     border: none;
     padding: 5px;
-    max-width: 70%; min-width: 300px;
+    max-width: 65%; min-width: 300px;
     max-height: 500px; 
     overflow: auto;
 }
@@ -54,6 +54,11 @@ a:hover {
     position: fixed;
     bottom: 0px;
     right: 0px;
+}
+
+.box:hover {
+    bottom: -2px;
+    right: -2px;
 }
 
 .text_field
@@ -68,12 +73,10 @@ a:hover {
     font-size: 20px;
     border-collapse: collapse;
     text-decoration: none;
-    max-width: 600px;
-    min-width: 50px;
+    width: 100%;
     min-height: 40px;
     max-height: 400px;
-    width: 400px;
-    height: 80px;
+    height: 40px;
 }
 
 .button_submit
@@ -108,8 +111,7 @@ a:hover {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     grid-auto-rows: 130px;}
 .grid_boxes > div > img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover; }
 .grid_boxes > div > a {
     display: block;
@@ -120,9 +122,22 @@ a:hover {
     width: 100%;
     padding-bottom: 10px; padding-top: 94px; }
 .grid_boxes > div > a:hover {
-    position: relative;
     color: #8FAED6;
     background-color: rgb(0, 0, 0, 0.6); border: 1px solid rgb(32, 37, 44)}
+
+.Table {
+    color: #92D3A7;
+    width: 30%;
+    font-size: 22px;
+    text-align: center;
+}
+
+.Table tr:nth-child(odd){
+    background-color: #041108;
+}
+.Table tr:nth-child(even){
+    background-color: #17403A;
+}
 
 ::-webkit-scrollbar-track {
     background: #000F19;

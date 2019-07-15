@@ -1,4 +1,5 @@
 from app.forms import second_game_const_form
+from app.forRoutes.parser import parser
 from Constellation.dictionary import *
 
 def SecondGameConst(const, form: second_game_const_form) -> list:
@@ -8,6 +9,7 @@ def SecondGameConst(const, form: second_game_const_form) -> list:
         list_return = []
         CloseConstellations = dict_constell[lat_rus_dict[const]].copy()
         for el in list_ans:
+            el = parser([el])[0]
             if el in CloseConstellations:
                 list_return.append((el, 1))
                 CloseConstellations.remove(el)
