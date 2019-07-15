@@ -58,12 +58,11 @@ def image_obj(obj):
         return render_template('image.html.j2', title = 'List of ' + obj, 
             links = links, messages = ['Выберите объект:'])
     elif obj in dictionary['constellation'] + dictionary['messier'] + dictionary['stars']:
-        messages = Image_obj(obj)
-        return render_template('image_obj.html.j2', title = "Image of " + obj, 
-            messages = messages, obj = obj)
+        text = Image_obj(obj)
+        print(text)
+        return render_template('image_obj.html.j2', title = "Image of " + obj, obj = obj, text = text)
     else:
-        return render_template('error.html.j2', title = '404', 
-            messages = ['404 NOT FOUND'])
+        return render_template('error.html.j2', title = '404', messages = '')
 
 @app.route('/image/')
 def image():

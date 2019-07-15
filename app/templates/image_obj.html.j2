@@ -1,13 +1,15 @@
 {% extends "base.html.j2" %}
 
 {% block content %}
-    <div>
-    {% for line in text %}
-        {{ line }}
-        <br>
-    {% endfor %}
-    </div>
-    <div class="picture">
-        <img src= "{{ url_for('static', filename=('pictures/' + obj + '.png' ) ) }}">
+    <div class="grid_image">
+        <div>
+        {% for line in text %}
+            {{ line }}
+            <br>
+        {% endfor %}
+        </div>
+        <div class="picture">
+            <img src= "{{ url_for('static', filename=('pictures/' + obj + '.png' ) ) }}">
+        </div>
     </div>
 {% endblock %}
