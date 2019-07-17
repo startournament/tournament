@@ -11,6 +11,6 @@ with open("messier_table.txt", "r") as f_in, open('new_messier.py', 'w') as f_ou
         Type = translate[t[1]]
         distance = t[2] + ' тыс. св. лет'
         magnitude = t[4] + '<sup>m</sup>'
-        messier_dict['M' + str(i)] = {'name': name, 'type': Type, 'distance': distance, 'constallation': t[3], 'magnitude': magnitude}
+        messier_dict['M' + str(i)] = {'name': name, 'type': Type, 'distance': distance, 'constellation': t[3], 'magnitude': magnitude}
         t = f_in.readline().rstrip().split(',')
     print('messier_dict =', messier_dict, file = f_out)
