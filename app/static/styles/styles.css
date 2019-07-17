@@ -24,8 +24,9 @@ a:hover {
     background-color: #00070F; 
     padding: 20px; 
     text-align: left; 
-    width: 75%; 
+    width: 90%; 
     border: 1px solid grey; 
+    min-width: 1000px;
     margin:auto;
     min-height: 600px;
 }
